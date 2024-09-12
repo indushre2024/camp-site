@@ -1,0 +1,15 @@
+
+
+.c-highlight{
+    border:none;
+    /* background-color: rgb(111, 111, 111); */
+    box-shadow: 0px 0px 5px 1px rgb(43, 43, 43);
+
+}
+
+#map {
+    top: 0;
+    bottom: 0;
+    width: 70%;
+    height:400px;
+}

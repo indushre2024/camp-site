@@ -1,0 +1,38 @@
+<% layout('layouts/Boilerplate') %>
+    <h1 class="text-center">New Campground</h1>
+    <div class="col-6 offset-3">
+        <form action="/campgrounds" method="POST" class="needs-validation" enctype="multipart/form-data" novalidate>
+            <div>
+                <label for="title" class="form-label">Title</label>
+                <input class="form-control" type="text" id="title" name="campground[title]" required>
+            </div>
+            <div>
+                <label class="form-label" for="location">Lacation of the Campground</label>
+                <input class="form-control" type="text" id="location" name="campground[location]" required>
+            </div>
+
+            <div>
+                <label for="price" class="form-label">Campground Price</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">$</span>
+                    <input name="campground[price]" id="price" type="number" class="form-control" placeholder="0.00" aria-label="Price" aria-describedby="basic-addon1" required>
+                </div>
+            </div>
+            <div>
+                <!-- <label class="form-label" for="image-url">Image url</label> -->
+                <div class="mb-3">
+                    <label for="images" class="form-label">Upload image file(s)</label>
+                    <input class="form-control" type="file" id="images" name="campground[images]" multiple>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="3" name="campground[description]" required></textarea>
+              </div>
+
+            
+            <button class="btn btn-success">Create Campground</button>
+        </form>
+    </div>
+    
